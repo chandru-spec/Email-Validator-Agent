@@ -257,7 +257,7 @@ def process_emails(df, email_col, enable_smtp_rcpt_check=False):
 st.title("Bulk Email Validation Tool")
 st.write("Upload a CSV or XLSX file. The script will detect any column with 'email' in its name (case-insensitive), or let you select the email column.")
 
-uploaded_file = st.file_uploader("Choose a file", type=['csv', 'xlsx'])
+uploaded_file = st.file_uploader("Choose a file", type=['csv', 'xlsx'], key="main_file_upload")
 enable_smtp = st.checkbox("Enable SMTP RCPT TO checks (Not recommended for known providers)")
 enable_ai = st.checkbox("Enable AI agent classification (requires Ollama)")
 
